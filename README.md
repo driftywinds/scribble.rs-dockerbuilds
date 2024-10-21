@@ -6,9 +6,20 @@ Also available on the Docker Hub Registry - [```driftywinds/scribble.rs:latest``
 
 How to use: - 
 
-1. Follow instructions of the official repo from [here](https://github.com/scribble-rs/scribble.rs?tab=readme-ov-file#running-the-docker-container).
-2. Remove or comment out the ```PORT:<port>``` line.
-3. Replace the "image" part of the docker-compose.yml to ```driftywinds/scribble.rs:latest```.
+1. Make a file called ```compose.yml```
+2. Paste this into it: - 
+```
+version: "2.4"
+services:
+    scribble.rs:
+        pull_policy: always
+#        environment:
+#            - PORT=3014
+        ports:
+            - 3014:8080
+        image: driftywinds/scribble.rs:latest
+```
+3. Type ```docker compose up -d```
 
 <br>
 
