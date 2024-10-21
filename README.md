@@ -17,7 +17,7 @@ services:
 #            - PORT=3014
         ports:
             - 3014:8080
-        image: driftywinds/scribble.rs:latest
+        image: ghcr.io/driftywinds/scribble.rs:latest
 ```
 3. Type ```docker compose up -d```
 
